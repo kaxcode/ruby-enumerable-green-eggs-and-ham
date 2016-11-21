@@ -15,7 +15,7 @@ class GreenEggsAndHam
   end
 
   # count_of_words_less_than_four_letters
-  def number_of_words_shorter_than ( word )
+  def number_of_words_shorter_than (num)
     @words.count {|word| word.length < 4}
   end
 
@@ -27,5 +27,10 @@ class GreenEggsAndHam
   # how_many_stanzas
   def stanzas
     @text.split("\n\n")
+  end
+
+  # adventure_mode_line_count_should_not_include_blanks
+  def lines
+    @text.split("\n").reject {|word| word.empty?}
   end
 end
