@@ -33,4 +33,8 @@ class GreenEggsAndHam
   def lines
     @text.split("\n").reject {|word| word.empty?}
   end
+
+  def frequency_of_unique_words
+    word_uniq = @words.map {|word| word.downcase}.uniq.count
+  end
 end
